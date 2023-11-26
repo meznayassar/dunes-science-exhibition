@@ -1,5 +1,6 @@
 import streamlit as st                                      # web app development
-import pandas as pd                                         # for displaying table like data
+import pandas as pd    
+from os import path, getcwd                                     # for displaying table like data
 #----------------------------CSS Styling--------------------------
 
 st.markdown("""
@@ -32,7 +33,8 @@ st.markdown("""
 
 # get path to image in a variable named path_dunes_logo
 # pass the image path to the function in streamlit that renders the image
-path_dunes_logo = "images\dunes-logo.PNG"
+dirname = getcwd()
+path_dunes_logo = path.join(dirname, "images\dunes-logo.PNG")
 st.image(path_dunes_logo)
 
 #----------------------------Tas and contents--------------------------

@@ -27,8 +27,14 @@ st.markdown("""
             #MainMenu {visibility: hidden;}
             footer {visibility: hidden;}
 
-            </style>
-            """, unsafe_allow_html=True)
+            </style>""", unsafe_allow_html=True)
+
+st.markdown("""
+            <style>
+
+            #GithubIcon {visibility: hidden;}
+            
+            <style>""", unsafe_allow_html=True)
 
 #----------------------------School logo--------------------------
 

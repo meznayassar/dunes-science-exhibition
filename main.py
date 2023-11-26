@@ -34,7 +34,7 @@ st.markdown("""
 # get path to image in a variable named path_dunes_logo
 # pass the image path to the function in streamlit that renders the image
 dirname = getcwd()
-path_dunes_logo = path.join(dirname, "images\dunes-logo.PNG")
+path_dunes_logo = path.join(dirname, "images", "dunes-logo.PNG")
 st.image(path_dunes_logo)
 
 #----------------------------Tas and contents--------------------------
@@ -152,14 +152,14 @@ with credits:
     with developer:
         st.subheader("Developer")
         # st.subheader("")
-        st.image("images\mezu.png")
+        st.image(path.join(dirname, "images", "mezu.png"))
         st. write("Mezna Yassar")
     with coordinator:
         st.subheader("Site Co-ordinator")
-        st.image("images\dhanu.PNG")
+        st.image(path.join(dirname, "images", "dhanu.PNG"))
         st. write("Dhanya Shyju")
     with project_owner:
         st.subheader("Principal")
         # st.subheader("")
-        st.image("images\shazzu.PNG")
+        st.image(path.join(dirname, "images", "shazzu.PNG"))
         st. write("Shahzad Bilal")

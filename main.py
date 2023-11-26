@@ -34,7 +34,7 @@ st.markdown("""
 
 # get path to image in a variable named path_dunes_logo
 # pass the image path to the function in streamlit that renders the image
-dirname = getcwd()
+dirname = path.dirname(path.abspath(__file__))
 path_dunes_logo = path.join(dirname, "images", "dunes-logo.png")
 st.image(Image.open(path_dunes_logo))
 

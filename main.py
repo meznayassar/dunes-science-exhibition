@@ -1,6 +1,7 @@
 import streamlit as st                                      # web app development
-import pandas as pd    
-from os import path, getcwd                                     # for displaying table like data
+import pandas as pd                                         # for displaying table like data
+from os import path, getcwd                                     
+from PIL import Image
 #----------------------------CSS Styling--------------------------
 
 st.markdown("""
@@ -35,7 +36,7 @@ st.markdown("""
 # pass the image path to the function in streamlit that renders the image
 dirname = getcwd()
 path_dunes_logo = path.join(dirname, "images", "dunes-logo.png")
-st.image(path_dunes_logo)
+st.image(Image.open(path_dunes_logo))
 
 #----------------------------Tas and contents--------------------------
 
@@ -152,14 +153,14 @@ with credits:
     with developer:
         st.subheader("Developer")
         # st.subheader("")
-        st.image(path.join(dirname, "images", "mezu.png"))
+        st.image(Image.open(path.join(dirname, "images", "mezu.png")))
         st. write("Mezna Yassar")
     with coordinator:
         st.subheader("Site Co-ordinator")
-        st.image(path.join(dirname, "images", "dhanu.png"))
+        st.image(Image.open(path.join(dirname, "images", "dhanu.png")))
         st. write("Dhanya Shyju")
     with project_owner:
         st.subheader("Principal")
         # st.subheader("")
-        st.image(path.join(dirname, "images", "shazzu.png"))
+        st.image(Image.open(path.join(dirname, "images", "shazzu.png")))
         st. write("Shahzad Bilal")

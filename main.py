@@ -74,7 +74,7 @@ with exhibits:
     with st.expander("Grade 1"):
         st.markdown("""
                         <ol>
-                        <li>ffffffffffffffffff</li>
+                        <li>Blasting Volcano</li>
                         <li>Bombastic Side eye</li>
                         <li>Just Looking Like a Wow</li>
                         <li>Blah Blah Blah</li>

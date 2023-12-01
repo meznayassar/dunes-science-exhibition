@@ -36,6 +36,14 @@ st.markdown("""
             
             <style>""", unsafe_allow_html=True)
 
+st.markdown("""
+            <style>
+
+            .reportview-container {
+                background: url("images/stem.png")
+            }
+            </style>""", unsafe_allow_html=True)
+
 #----------------------------School logo--------------------------
 
 # get path to image in a variable named path_dunes_logo
@@ -56,8 +64,8 @@ intro, events, exhibits, gallery, feedback, credits,  contacts_us = st.tabs(["In
 
 with intro:
     st.header ("Welcome to Dunes Science Exhibition Portal")
-    st.write('Welcome to the hub of brilliance, where science meets art in a symphony of innovation and creativity. Dive into the dynamic realm of our Dunes Science and Arts Exhibition, a fusion of intellect and imagination.')
-    st.write('Unleash your curiosity as you explore the exhibits made with passion, each creation is a testament to the boundless potential within our talented students. We thank you for joining us on this thrilling journey of discovery!')
+    st.write('*Welcome to the hub of brilliance, where science meets art in a symphony of innovation and creativity. Dive into the dynamic realm of our Dunes Science and Arts Exhibition, a fusion of intellect and imagination.*')
+    st.write('*Unleash your curiosity as you explore the exhibits made with passion, each creation is a testament to the boundless potential within our talented students. We thank you for joining us on this thrilling journey of discovery!*')
     st.markdown ("""
                  **Venue**: Dunes International School, Al-Khobar
                  
@@ -69,51 +77,23 @@ with intro:
     st.map()
 
 with events:
-    st.table(pd.DataFrame({"Time":["09:00 - 10:00", "10:00 - 11:00", "11:00 - 12:00"], "Event":["Inaugration", "Award Ceremony", "Closing Ceremony"]}))
+    st.dataframe(pd.read_excel('data\Events.xlsx'), hide_index=True)
 
 with exhibits:
     with st.expander("Science"):
-        st.table(pd.DataFrame({"Grade 1":["Student 1", "Student 2", "Student 3", "Student 4", "Student 5", "Student 6", "Student 7", "Student 9", "Student 10",]}))
+        st.dataframe(pd.read_excel('data\Science.xlsx'), hide_index=True)
 
     with st.expander("Math"):
-        st.markdown("""
-                         <ol> 
-                         <li>Boom Shakalaka</li>
-                         <li>Woof Woof</li>
-                         <li>Baby Bhatuddoodo</li>
-                         <li>Disco Party</li>
-                         </ol>
-                    """, unsafe_allow_html=True)
-    with st.expander("Computer Science"):
-        st.markdown("""
-                         <ol>
-                         <li>Helicopter Helicopter</li>
-                         <li>Bhupendra Jodi</li>
-                         <li>Despacito</li>
-                         </ol> 
-                    """, unsafe_allow_html=True )
-    with st.expander("English"):
-        st.markdown("""
-                         <ol>
-                         <li>Shimmer</li>
-                         <li>Cupcakes</li>
-                         <li>Rocky</li>
-                    """, unsafe_allow_html=True)
+        st.dataframe(pd.read_excel('data\Math.xlsx'), hide_index=True)
+        
+    # with st.expander("English"):
+    #     st.dataframe(pd.read_excel('data\English.xlsx'), hide_index=True)
+               
     with st.expander("Social Science"):
-        st.markdown("""
-                         <ol>
-                         <li>Glow In The Dark</li>
-                         <li>Puppets</li>
-                         <li>Giraffes</li>
-                    """, unsafe_allow_html=True)
-    with st.expander("Arts"):
-        st.markdown("""
-                         <ol>
-                         <li>Slime</li>
-                         <li>Nature</li>
-                         <li>Rhinestones</li>
-                    """, unsafe_allow_html=True)
+        st.dataframe(pd.read_excel('data\Social.xlsx'), hide_index=True)
 
+#     with st.expander("Arts"):
+#         st.dataframe(pd.read_excel('data\Arts.xlsx'), hide_index=True)
 with feedback:
     feedback_form_link = ''
     st.write("[Click here to submit](%s) feedback" % feedback_form_link)

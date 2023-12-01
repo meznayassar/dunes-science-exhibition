@@ -74,11 +74,12 @@ with exhibits:
     with st.expander("Grade 1"):
         st.markdown("""
                         <ol>
-                        <li>Blasting Volcano</li>
+                        <li>Blasting </li>
                         <li>Bombastic Side eye</li>
                         <li>Just Looking Like a Wow</li>
                         <li>Blah Blah Blah</li>
                         </ol>
+                        
                     """, unsafe_allow_html=True)
     with st.expander("Grade 2"):
         st.markdown("""

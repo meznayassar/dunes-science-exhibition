@@ -52,11 +52,13 @@ st.image('images/dunes-logo1.png')
 #             st.image to display images
 #             st.columns to display stuff side by side and so on
 
-intro, events, exhibits, feedback, sponsors, credits,  contacts_us = st.tabs(["Introduction", "Events", "Exhibits", "Feedback", "Sponsors", "Credits", "Contact Us"])
+intro, events, exhibits, gallery, feedback, credits,  contacts_us = st.tabs(["Introduction", "Events", "Exhibits", "Gallery", "Feedback", "Credits", "Contact Us"])
 
 with intro:
     st.header ("Welcome to Dunes Science Exhibition Portal")
-    st.write('Blah '*200)
+    st.markdown ("""Welcome to the hub of brilliance, where science meets art in a symphony of innovation and creativity! Dive into the dynamic realm of our Dunes's Science and Arts Exhibition, a fusion of intellect and imagination.
+    
+ Unleash your curiosity as you explore the exhibits made with passion, each creation is a testament to the boundless potential within our talented students. We thank you for joining us on this thrilling journey of discovery!🌟🌟🌟""")
     st.markdown ("""
                  **Venue**: Dunes International School, Al-Khobar
                  
@@ -71,16 +73,10 @@ with events:
     st.table(pd.DataFrame({"Time":["09:00 - 10:00", "10:00 - 11:00", "11:00 - 12:00"], "Event":["Inaugration", "Award Ceremony", "Closing Ceremony"]}))
 
 with exhibits:
-    with st.expander("Grade 1"):
-        st.markdown("""
-                        <ol>
-                        <li>Blasting Volcano</li>
-                        <li>Bombastic Side eye</li>
-                        <li>Just Looking Like a Wow</li>
-                        <li>Blah Blah Blah</li>
-                        </ol>
-                    """, unsafe_allow_html=True)
-    with st.expander("Grade 2"):
+    with st.expander("Science"):
+        st.table(pd.DataFrame({"Grade 1":["Student 1", "Student 2", "Student 3", "Student 4", "Student 5", "Student 6", "Student 7", "Student 9", "Student 10",]}))
+
+    with st.expander("Math"):
         st.markdown("""
                          <ol> 
                          <li>Boom Shakalaka</li>
@@ -89,7 +85,7 @@ with exhibits:
                          <li>Disco Party</li>
                          </ol>
                     """, unsafe_allow_html=True)
-    with st.expander("Grade 3"):
+    with st.expander("Computer Science"):
         st.markdown("""
                          <ol>
                          <li>Helicopter Helicopter</li>
@@ -97,54 +93,26 @@ with exhibits:
                          <li>Despacito</li>
                          </ol> 
                     """, unsafe_allow_html=True )
-    with st.expander("Grade 4"):
+    with st.expander("English"):
         st.markdown("""
                          <ol>
                          <li>Shimmer</li>
                          <li>Cupcakes</li>
                          <li>Rocky</li>
                     """, unsafe_allow_html=True)
-    with st.expander("Grade 5"):
+    with st.expander("Social Science"):
         st.markdown("""
                          <ol>
                          <li>Glow In The Dark</li>
                          <li>Puppets</li>
                          <li>Giraffes</li>
                     """, unsafe_allow_html=True)
-    with st.expander("Grade 6"):
+    with st.expander("Arts"):
         st.markdown("""
                          <ol>
                          <li>Slime</li>
                          <li>Nature</li>
                          <li>Rhinestones</li>
-                    """, unsafe_allow_html=True)
-    with st.expander("Grade 7"):
-        st.markdown("""
-                         <ol>
-                         <li>Rasberries</li>
-                         <li>Candles</li>
-                         <li>Pillows</li>
-                    """, unsafe_allow_html=True)
-    with st.expander("Grade 8"):
-        st.markdown("""
-                         <ol>
-                         <li>Snowflakes</li>
-                         <li>Moons</li>
-                         <li>Glitter</li>
-                    """, unsafe_allow_html=True)
-    with st.expander("Grade 9"):
-        st.markdown("""
-                         <ol>
-                         <li>Euphoria</li>
-                         <li>Sunshine</li>
-                         <li>Gentlecrabs</li>
-                    """, unsafe_allow_html=True)
-    with st.expander("Grade 10"):
-        st.markdown("""
-                         <ol>
-                         <li>Celestial Bodies</li>
-                         <li>Aura</li>
-                         <li>Sway</li>
                     """, unsafe_allow_html=True)
 
 with feedback:
@@ -156,16 +124,15 @@ with credits:
 
     with developer:
         st.subheader("Developer")
-        # st.subheader("")
-        # st.image(Image.open(path.join(dirname, "images", "mezu.png")))
         st.image("images/mezu1.png")
         st. write("Mezna Yassar")
+
     with coordinator:
         st.subheader("Site Co-ordinator")
         st.image("images/dhanu1.png")
         st. write("Dhanya Shyju")
+
     with project_owner:
         st.subheader("Principal")
-        # st.subheader("")
         st.image("images/shazzu1.png")
         st. write("Shahzad Bilal")

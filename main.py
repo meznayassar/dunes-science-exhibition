@@ -56,9 +56,8 @@ intro, events, exhibits, gallery, feedback, credits,  contacts_us = st.tabs(["In
 
 with intro:
     st.header ("Welcome to Dunes Science Exhibition Portal")
-    st.markdown ("""Welcome to the hub of brilliance, where science meets art in a symphony of innovation and creativity! Dive into the dynamic realm of our Dunes's Science and Arts Exhibition, a fusion of intellect and imagination.
-    
- Unleash your curiosity as you explore the exhibits made with passion, each creation is a testament to the boundless potential within our talented students. We thank you for joining us on this thrilling journey of discovery!🌟🌟🌟""")
+    st.write('Welcome to the hub of brilliance, where science meets art in a symphony of innovation and creativity. Dive into the dynamic realm of our Dunes Science and Arts Exhibition, a fusion of intellect and imagination.')
+    st.write('Unleash your curiosity as you explore the exhibits made with passion, each creation is a testament to the boundless potential within our talented students. We thank you for joining us on this thrilling journey of discovery!')
     st.markdown ("""
                  **Venue**: Dunes International School, Al-Khobar
                  

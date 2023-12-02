@@ -70,7 +70,7 @@ st.image('images/dunes-logo1.png')
 #             st.image to display images
 #             st.columns to display stuff side by side and so on
 
-intro, events, exhibits, gallery, feedback, credits,  contacts_us = st.tabs(["Introduction", "Events", "Exhibits", "Gallery", "Feedback", "Credits", "Contact Us"])
+intro, events, exhibits, gallery, credits,  contacts_us = st.tabs(["Introduction", "Events", "Exhibits", "Gallery", "Credits", "Contact Us"])
 
 with intro:
     st.header ("Welcome to Dunes Science Exhibition Portal")
@@ -81,7 +81,7 @@ with intro:
                  
                  **Date**: December 2, 2023
 
-                 **Time**: 9:00 AM - 5:00 PM
+                 **Time**: 9:00 AM - 1:30 PM
                  
                  """)
     map = pd.read_excel('data/map.xlsx')

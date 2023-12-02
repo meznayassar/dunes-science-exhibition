@@ -2,7 +2,16 @@ import streamlit as st                                      # web app developmen
 import pandas as pd                                         # for displaying table like data
 from os import path, getcwd                                     
 from PIL import Image
+import base64
 #----------------------------CSS Styling--------------------------
+
+# st.set_page_config(layout="wide")
+
+def add_bg_from_local(image_file):
+    with open(image_file, "rb") as image_file:
+        return base64.b64encode(image_file.read())
+
+encoded_string = add_bg_from_local('images/stem3.png')    
 
 st.markdown("""
         <style>
@@ -36,13 +45,14 @@ st.markdown("""
             
             <style>""", unsafe_allow_html=True)
 
-st.markdown("""
+st.markdown(f"""
             <style>
+    .stApp {{
+        background-image: url(data:image/{"png"};base64,{encoded_string.decode()});
 
-            .reportview-container {
-                background: url("images/stem.png")
-            }
+    }}
             </style>""", unsafe_allow_html=True)
+
 
 #----------------------------School logo--------------------------
 
@@ -74,10 +84,20 @@ with intro:
                  **Time**: 9:00 AM - 5:00 PM
                  
                  """)
-    st.map()
+    map = pd.read_excel('data/map.xlsx')
+    st.map(map,latitude='lat', longitude='lon', zoom=15, color='#FF0000', size=20)
 
 with events:
-    st.dataframe(pd.read_excel('data/Events.xlsx'), hide_index=True)
+    st.write('**We invite all our guests to join us at the inaugral ceremony**')
+    st.write('**09:30 - 10:00** - Inaugration Ceremony')
+    st.write('**01:00 - 01:30** - Closing Ceremony')
+
+    st.write('**                    **')
+    st.write('**Our esteemed chief guests are**')
+    st.write('Mr. Awad Al Qahtani')
+    st.write('Ms. Sadaf Fahad ')
+    st.write('Mr. Faisal Abdulla ')
+    st.write('Mr. Khalid Al Owaid')
 
 with exhibits:
     with st.expander("Science"):
@@ -90,15 +110,18 @@ with exhibits:
     with st.expander("Social Science"):
         st.dataframe(pd.read_excel('data/Social.xlsx'), hide_index=True)
 
+    with st.expander("Computer Science"):
+        st.dataframe(pd.read_excel('data/Computer Science.xlsx'), hide_index=True)
+
     # with st.expander("English"):
     #     st.dataframe(pd.read_excel('data/English.xlsx'), hide_index=True)
 
     # with st.expander("Arts"):
     #     st.dataframe(pd.read_excel('data/Arts.xlsx'), hide_index=True)
 
-with feedback:
-    feedback_form_link = ''
-    st.write("[Click here to submit](%s) feedback" % feedback_form_link)
+# with feedback:
+#     feedback_form_link = ''
+#     st.write("[Click here to submit](%s) feedback" % feedback_form_link)
 
 with credits:
     developer, coordinator, project_owner = st.columns (3)

@@ -123,6 +123,16 @@ with exhibits:
 #     feedback_form_link = ''
 #     st.write("[Click here to submit](%s) feedback" % feedback_form_link)
 
+with gallery:
+    col1,col2 = st.columns(2)
+    with col1:
+        st.image('images/x (1).jpeg')
+        st.image('images/x (2).jpeg')
+        st.image('images/x (3).jpeg')
+    with col2:
+        st.image('images/x (4).jpeg')
+        st.image('images/x (5).jpeg')
+        st.image('images/x (1).jpeg')
 with credits:
     developer, coordinator, project_owner = st.columns (3)
 

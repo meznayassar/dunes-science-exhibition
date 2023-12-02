@@ -114,6 +114,6 @@ with credits:
         st. write("Dhanya Shyju")
 
     with project_owner:
-        st.subheader("Principal")
+        st.subheader("Academic Coordinator")
         st.image("images/shazzu1.png")
         st. write("Shahzad Bilal")

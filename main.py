@@ -77,23 +77,25 @@ with intro:
     st.map()
 
 with events:
-    st.dataframe(pd.read_excel('data\Events.xlsx'), hide_index=True)
+    st.dataframe(pd.read_excel('data/Events.xlsx'), hide_index=True)
 
 with exhibits:
     with st.expander("Science"):
-        st.dataframe(pd.read_excel('data\Science.xlsx'), hide_index=True)
+        st.dataframe(pd.read_excel('data/Science.xlsx'), hide_index=True)
 
     with st.expander("Math"):
-        st.dataframe(pd.read_excel('data\Math.xlsx'), hide_index=True)
-        
-    # with st.expander("English"):
-    #     st.dataframe(pd.read_excel('data\English.xlsx'), hide_index=True)
+        st.dataframe(pd.read_excel('data/Math.xlsx'), hide_index=True)
+
                
     with st.expander("Social Science"):
-        st.dataframe(pd.read_excel('data\Social.xlsx'), hide_index=True)
+        st.dataframe(pd.read_excel('data/Social.xlsx'), hide_index=True)
 
-#     with st.expander("Arts"):
-#         st.dataframe(pd.read_excel('data\Arts.xlsx'), hide_index=True)
+    # with st.expander("English"):
+    #     st.dataframe(pd.read_excel('data/English.xlsx'), hide_index=True)
+
+    # with st.expander("Arts"):
+    #     st.dataframe(pd.read_excel('data/Arts.xlsx'), hide_index=True)
+
 with feedback:
     feedback_form_link = ''
     st.write("[Click here to submit](%s) feedback" % feedback_form_link)
